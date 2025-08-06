@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_ai_gradient">
+
+    <!-- Decorative moving layer for subtle parallax -->
+    <View
+        android:id="@+id/parallaxLayer"
+        android:layout_width="1400dp"
+        android:layout_height="1400dp"
+        android:layout_marginTop="-200dp"
+        android:alpha="0.35"
+        android:background="@drawable/bg_ai_gradient" />
+
+    <!-- Lottie icon -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieView"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        app:lottie_rawRes="@raw/ai_icon"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true" />
+
+    <!-- App name with custom font -->
+    <TextView
+        android:id="@+id/titleAiva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lottieView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:letterSpacing="0.05"
+        android:text="Aiva"
+        android:textColor="#EAF2FF"
+        android:textSize="46sp"
+        android:textStyle="bold" />
+
+    <!-- Subtitle with lighter font -->
+    <TextView
+        android:id="@+id/subTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleAiva"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:alpha="0"
+        android:fontFamily="@font/poppins"
+        android:text="your lifestyle companion"
+        android:textColor="#C6D7FF"
+        android:textSize="18sp" />
+
+    <!-- Optional loading text -->
+    <TextView
+        android:id="@+id/loadingHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="48dp"
+        android:text="Calibrating intelligence…"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins"
+        android:textColor="#A9B8FF"
+        android:alpha="0" />
+
+</RelativeLayout>

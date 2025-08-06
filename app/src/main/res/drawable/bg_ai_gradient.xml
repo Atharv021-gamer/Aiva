@@ -1,0 +1,24 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="45"
+                android:startColor="#0C1022"
+                android:centerColor="#1B1F3B"
+                android:endColor="#09203F" />
+        </shape>
+    </item>
+
+    <!-- Soft radial glow behind the Lottie area -->
+    <item android:gravity="top|center_horizontal" android:top="48dp">
+        <shape android:shape="oval">
+            <size android:width="520dp" android:height="520dp" />
+            <gradient
+                android:type="radial"
+                android:gradientRadius="260dp"
+                android:startColor="#3326C6FF"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+</layer-list>

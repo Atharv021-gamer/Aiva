@@ -33,6 +33,21 @@ android {
 
 dependencies {
 
+        implementation ("com.airbnb.android:lottie:6.5.0")
+        implementation ("androidx.core:core-ktx:1.13.1")
+        implementation ("androidx.appcompat:appcompat:1.7.0")
+        implementation ("com.google.android.material:material:1.12.0")
+
+        // MotionLayout (comes with constraintlayout)
+        implementation ("androidx.constraintlayout:constraintlayout:2.2.0")
+
+   
+        implementation ("androidx.appcompat:appcompat:1.7.0")
+        implementation ("androidx.core:core-ktx:1.13.1")
+        implementation ("com.google.android.material:material:1.12.0")
+        implementation ("com.airbnb.android:lottie:6.5.0")
+
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

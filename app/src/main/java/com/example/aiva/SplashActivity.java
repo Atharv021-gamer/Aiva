@@ -1,5 +1,6 @@
 package com.example.aiva;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -29,24 +30,18 @@ public class SplashActivity extends AppCompatActivity {
     };
     private int phraseIndex = 0;
 
-    // Runnable for infinite subtitle swapping
     private final Runnable subtitleRunnable = new Runnable() {
         @Override
         public void run() {
-            // Fade out current text
             fadeOutView(subTitle, 0, 300);
 
-            // After fade-out, change text & fade in
             handler.postDelayed(() -> {
                 if (subTitle instanceof android.widget.TextView) {
                     ((android.widget.TextView) subTitle).setText(phrases[phraseIndex]);
                 }
                 fadeInView(subTitle, 0, 300);
 
-                // Move to next phrase
                 phraseIndex = (phraseIndex + 1) % phrases.length;
-
-                // Schedule next change after 2 seconds
                 handler.postDelayed(subtitleRunnable, 2000);
             }, 300);
         }
@@ -63,26 +58,27 @@ public class SplashActivity extends AppCompatActivity {
         subTitle = findViewById(R.id.subTitle);
         loadingHint = findViewById(R.id.loadingHint);
 
-        // Lottie infinite loop
         lottieView.setRepeatCount(Animation.INFINITE);
         lottieView.setSpeed(1.0f);
 
-        // Background infinite parallax
         startParallax();
-
-        // Title pop-in animation
         popTitle();
 
-        // Show first phrase and start infinite swap
         if (subTitle instanceof android.widget.TextView) {
             ((android.widget.TextView) subTitle).setText(phrases[0]);
         }
         fadeInView(subTitle, 0, 300);
-        phraseIndex = 1; // start from second phrase next
+        phraseIndex = 1;
         handler.postDelayed(subtitleRunnable, 2000);
 
-        // Fade-in loading text
         fadeInView(loadingHint, 250, 600);
+
+        // 🚀 Launch MainActivity after splash duration (5s here)
+        handler.postDelayed(() -> {
+            Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish(); // close splash
+        }, 3000);
     }
 
     private void startParallax() {

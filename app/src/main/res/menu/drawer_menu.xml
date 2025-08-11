@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_settings"
+        android:title="Settings"
+        android:icon="@drawable/ic_settings" />
+
+    <item
+        android:id="@+id/nav_about"
+        android:title="About"
+        android:icon="@drawable/ic_about" />
+
+    <item
+        android:id="@+id/nav_meal_planner"
+        android:title="Meal Planner"
+        android:icon="@drawable/ic_meal" />
+
+    <item
+        android:id="@+id/nav_shopping_ai"
+        android:title="Shopping AI"
+        android:icon="@drawable/ic_shopping" />
+
+    <item
+        android:id="@+id/nav_skin_care"
+        android:title="Skin Care AI"
+        android:icon="@drawable/ic_skin" />
+
+    <item
+        android:id="@+id/nav_clothing_ai"
+        android:title="Clothing Recommender"
+        android:icon="@drawable/ic_clothing" />
+
+    <item
+        android:id="@+id/nav_environment_mode"
+        android:title="Environment Mode"
+        android:icon="@drawable/ic_enviornment" />
+
+</menu>

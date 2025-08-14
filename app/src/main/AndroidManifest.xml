@@ -21,6 +21,9 @@
         android:theme="@style/Theme.Aiva"
         tools:targetApi="31">
         <activity
+            android:name=".SkinCareChoiceActivity"
+            android:exported="false" />
+        <activity
             android:name=".SkinCareDetailsFormActivity"
             android:exported="false" />
         <activity

@@ -2,18 +2,42 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:resizeableActivity="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aiva"
-        tools:targetApi="31"
-        android:resizeableActivity="true">
-
+        tools:targetApi="31">
+        <activity
+            android:name=".SkinCareDetailsFormActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SkinCareRemediesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SkinCareProductsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SkinCareActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SuggestionResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MealPlannerActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
@@ -31,12 +55,5 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
-    <supports-screens
-        android:smallScreens="true"
-        android:normalScreens="true"
-        android:largeScreens="true"
-        android:xlargeScreens="true"
-        android:anyDensity="true" />
 
 </manifest>

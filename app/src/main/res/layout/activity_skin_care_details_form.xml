@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@drawable/bg_ai_gradient2"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Back Arrow -->
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_arrow"
+            android:contentDescription="Back" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tell Us About Your Skin"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Age -->
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:inputType="number"
+            android:padding="12dp"
+            android:background="@drawable/bg_edittext"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/black"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Gender -->
+        <Spinner
+            android:id="@+id/spinnerGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Skin Type -->
+        <Spinner
+            android:id="@+id/spinnerSkinType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Budget -->
+        <EditText
+            android:id="@+id/etBudget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Budget (₹)"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:background="@drawable/bg_edittext"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Skin Concerns -->
+        <EditText
+            android:id="@+id/etConcerns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Main Skin Concerns (Acne, Wrinkles, etc.)"
+            android:padding="12dp"
+            android:background="@drawable/bg_edittext"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:layout_marginBottom="25dp" />
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/btnProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Recommended Products"
+            android:backgroundTint="#6A5ACD"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_marginBottom="15dp" />
+
+        <Button
+            android:id="@+id/btnRemedies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Home Remedies"
+            android:backgroundTint="#228B22"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>

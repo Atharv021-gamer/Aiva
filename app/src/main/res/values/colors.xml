@@ -11,4 +11,19 @@
         <color name="bottom_nav_bg">#1F1F1F</color>
         <color name="transparent">#00000000</color>
 
+                <!-- Background gradients -->
+                <color name="aiGradientStart">#0D1B2A</color>  <!-- Dark navy blue -->
+                <color name="aiGradientEnd">#1B263B</color>    <!-- Slightly lighter navy -->
+
+                <!-- Accent color -->
+                <color name="aiAccent">#00E5FF</color>         <!-- Bright cyan / electric blue -->
+
+                <!-- Text colors -->
+                <color name="aiTextPrimary">#FFFFFF</color>    <!-- White -->
+                <color name="aiTextSecondary">#BBFFFFFF</color> <!-- White with transparency -->
+
+
+
+
+
 </resources>

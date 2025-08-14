@@ -1,5 +1,6 @@
 package com.example.aiva;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -70,6 +71,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Quick action buttons
         btnMealPlanner.setOnClickListener(v -> {
+
+                Intent intent = new Intent(MainActivity.this, MealPlannerActivity.class);
+                startActivity(intent);
+
             // Open meal planner activity
         });
 
